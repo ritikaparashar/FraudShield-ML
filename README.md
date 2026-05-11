@@ -177,19 +177,16 @@ Accuracy is not the main metric for this dataset because the fraud class is rare
 - `ROC-AUC` - ranking quality across thresholds
 - `PR-AUC` - precision-recall performance under class imbalance
 
-## Limitations
+## Current Scope
 
-- The default prediction thresholds are simple probability cutoffs and should be tuned for the target operating environment.
-- The current pipeline is batch-oriented and does not include a web API.
-- Model explanations are not included yet.
-- The Kaggle dataset is anonymized and historical, so live deployment would require fresh data validation and monitoring.
+This version focuses on offline model training, evaluation, and reproducible fraud-risk prediction using an anonymized transaction dataset.
 
-## Future Improvements
+## Possible Extensions
 
 - Add threshold tuning based on false-positive and false-negative costs.
 - Add SHAP or permutation-importance explanations.
-- Add a FastAPI inference service.
-- Add a Streamlit monitoring dashboard.
+- Add a FastAPI inference service for real-time transaction scoring.
+- Add a Streamlit monitoring dashboard for model outputs and fraud-risk trends.
 - Add automated tests for data loading, feature validation, and inference output.
 - Add experiment tracking for comparing model versions.
 
